@@ -20,6 +20,10 @@ const options = {
   onClose(selectedDates) {
       userSelectedDate = selectedDates[0];
       if (userSelectedDate < Date.now()) {
+        startBtn.setAttribute('disabled', '');
+        startBtn.style.backgroundColor = '#CFCFCF';
+          startBtn.style.color = '##989898';
+          
     iziToast.show({
         message: 'Please choose a date in the future',
         messageColor: '#FFFFFF',
